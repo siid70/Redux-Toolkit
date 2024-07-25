@@ -8,7 +8,7 @@ const initialState = {
   isLoading: true
 };
 
-const cartReducer = createSlice({
+const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
@@ -43,6 +43,6 @@ const cartReducer = createSlice({
 });
 
 export const { clearCart, removeItem, increase, decrease, calcTotal } =
-  cartReducer.actions;
+  cartSlice.actions;
 
-export default cartReducer.reducer;
+export default cartSlice.reducer;

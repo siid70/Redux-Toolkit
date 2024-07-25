@@ -1,4 +1,4 @@
-import { clearCart } from "../features/cart/cartReducer";
+import { openModal } from "../features/Modal/modalSlice";
 import CartItem from "./CartItem";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -9,8 +9,8 @@ const CartContainer = () => {
     return (
       <section className="cart container">
         <header>
-          <h2 style={{ textAlign: "center" }}>your bag</h2>
-          <h4 className="empty-cart">is currently empty</h4>
+          <h2 className="head-title">Your Bag</h2>
+          <h4 className="empty-cart">Is currently Empty!</h4>
         </header>
       </section>
     );
@@ -30,12 +30,12 @@ const CartContainer = () => {
         <div className="cart-total" style={{ paddingBottom: "3rem" }}>
           <h4>
             <span style={{ float: "left" }}>Total</span>{" "}
-            <span style={{ float: "right" }}>${total}</span>
+            <span style={{ float: "right" }}>${total.toFixed(2)}</span>
           </h4>
         </div>
         <button
           className="btn btn-danger clear-btn"
-          onClick={() => dispatch(clearCart())}
+          onClick={() => dispatch(openModal())}
         >
           clear cart
         </button>
