@@ -1,6 +1,6 @@
+import { useSelector, useDispatch } from "react-redux";
 import { openModal } from "../features/Modal/modalSlice";
 import CartItem from "./CartItem";
-import { useSelector, useDispatch } from "react-redux";
 
 const CartContainer = () => {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const CartContainer = () => {
   return (
     <section className="cart container">
       <header>
-        <h2 style={{ textAlign: "center" }}>your bag</h2>
+        <h2 className="head-title">Your Bag</h2>
       </header>
       <div>
         {cartItems.map((item) => {
@@ -37,7 +37,7 @@ const CartContainer = () => {
           className="btn btn-danger clear-btn"
           onClick={() => dispatch(openModal())}
         >
-          clear cart
+          Clear Carts
         </button>
       </footer>
     </section>

@@ -77,6 +77,11 @@ nav svg {
   position: relative;
 }
 
+.cart-item img {
+  width: 10rem;
+  height: 10rem;
+}
+
 .cart-item-info {
   margin: 1rem;
 }
